@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LessonITAcademy</string>
+    <string name="text_one">Pizza</string>
+    <string name="text_two">Burger</string>
+    <string name="btn_change">Change!</string>
+
+</resources>
