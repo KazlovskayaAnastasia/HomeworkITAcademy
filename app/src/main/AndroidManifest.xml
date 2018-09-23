@@ -18,6 +18,8 @@
 
         <activity android:name=".lesson1.Lesson1Activity">
         </activity>
+        <activity android:name=".lesson1.Lesson2Activity">
+        </activity>
 
     </application>
 
