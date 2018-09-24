@@ -46,8 +46,8 @@ public class MainScreenActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Toast toast = Toast.makeText(getApplicationContext(), R.string.toast, Toast.LENGTH_SHORT);
-                toast.show();
+                Intent intent = new Intent(MainScreenActivity.this, Lesson3Activity.class);
+                startActivity(intent);
             }
         });
     }
