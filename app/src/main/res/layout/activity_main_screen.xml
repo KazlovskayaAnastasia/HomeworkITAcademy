@@ -23,4 +23,10 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_homework_3"/>
 
+    <Button
+        android:id="@+id/btn_hw4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_homework_4"/>
+
 </LinearLayout>

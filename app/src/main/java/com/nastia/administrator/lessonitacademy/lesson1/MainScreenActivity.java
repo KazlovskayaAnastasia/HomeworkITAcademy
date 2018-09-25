@@ -14,6 +14,7 @@ public class MainScreenActivity extends Activity {
     Button btnHw1;
     Button btnHw2;
     Button btnHw3;
+    Button btnHw4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainScreenActivity extends Activity {
         btnHw1 = findViewById(R.id.btn_hw1);
         btnHw2 = findViewById(R.id.btn_hw2);
         btnHw3 = findViewById(R.id.btn_hw3);
+        btnHw4 = findViewById(R.id.btn_hw4);
 
         btnHw1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +50,15 @@ public class MainScreenActivity extends Activity {
 
                 Intent intent = new Intent(MainScreenActivity.this, Lesson3Activity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnHw4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast toast = Toast.makeText(getApplicationContext(), R.string.toast, Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
     }

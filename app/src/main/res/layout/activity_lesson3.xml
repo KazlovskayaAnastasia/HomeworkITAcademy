@@ -9,7 +9,7 @@
         android:id="@+id/et_link"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="http://i.imgur.com/DvpvklR.png"/>
+        android:text="@string/url_image"/>
 
     <Button
         android:id="@+id/btn_get_image"
@@ -17,14 +17,28 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginTop="20dp"
-        android:text="Get image"
+        android:text="@string/get_image"
         android:textSize="15sp"/>
 
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="300dp"
-        android:layout_height="370dp"
-        android:layout_marginTop="20dp"/>
+    <RelativeLayout
+        android:layout_width="305dp"
+        android:layout_height="370dp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="305dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
 
 
 </LinearLayout>
