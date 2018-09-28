@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 import com.nastia.administrator.lessonitacademy.R;
 
+import lesson2.Lesson2Activity;
+import lesson3.Lesson3Activity;
+import lesson4.Lesson4Activity;
+
 public class MainScreenActivity extends Activity {
 
     Button btnHw1;
@@ -57,8 +61,9 @@ public class MainScreenActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                Toast toast = Toast.makeText(getApplicationContext(), R.string.toast, Toast.LENGTH_SHORT);
-                toast.show();
+                Intent intent = new Intent(MainScreenActivity.this, Lesson4Activity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.left_out,R.anim.right_in);
             }
         });
     }

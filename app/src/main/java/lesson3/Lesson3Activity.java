@@ -1,4 +1,4 @@
-package com.nastia.administrator.lessonitacademy.lesson1;
+package lesson3;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
