@@ -11,6 +11,7 @@
         android:layout_centerHorizontal="true"/>
 
     <lesson4.CircleView
+        android:id="@+id/circle"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_below="@+id/image_view"
