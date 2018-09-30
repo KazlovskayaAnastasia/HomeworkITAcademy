@@ -4,24 +4,16 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/anim1"
+        android:id="@+id/image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/sova_anmation_1"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
 
-    <ImageView
-        android:id="@+id/anim2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/sova_anmation_2"
-        android:layout_centerInParent="true"/>
-
-    <ImageView
-        android:id="@+id/anim3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/sova_anmation_3"
-        android:layout_centerInParent="true"/>
+    <lesson4.CircleView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/image_view"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
