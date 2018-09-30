@@ -19,6 +19,7 @@ public class MainScreenActivity extends Activity {
     Button btnHw2;
     Button btnHw3;
     Button btnHw4;
+    Button btnHw5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainScreenActivity extends Activity {
         btnHw2 = findViewById(R.id.btn_hw2);
         btnHw3 = findViewById(R.id.btn_hw3);
         btnHw4 = findViewById(R.id.btn_hw4);
+        btnHw5 = findViewById(R.id.btn_hw5);
 
         btnHw1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +65,15 @@ public class MainScreenActivity extends Activity {
 
                 Intent intent = new Intent(MainScreenActivity.this, Lesson4Activity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.left_out,R.anim.right_in);
+                overridePendingTransition(R.anim.right_in,R.anim.left_out);
+            }
+        });
+
+        btnHw5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(getApplicationContext(), "In process...", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
     }
