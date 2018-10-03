@@ -13,7 +13,7 @@ public class Lesson5Activity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson5);
-        timerView = (ClockView) findViewById(R.id.dz4_timer_view);
+        timerView = findViewById(R.id.dz4_timer_view);
     }
 
     @Override
