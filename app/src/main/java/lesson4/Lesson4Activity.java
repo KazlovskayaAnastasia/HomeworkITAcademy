@@ -24,7 +24,7 @@ public class Lesson4Activity extends Activity {
 
         animation.start();
 
-        float[] data = {5, 5, 10,10};
+        float[] data = {5, 5, 10};
         circle.setData(data);
     }
 }
