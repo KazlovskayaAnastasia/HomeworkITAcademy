@@ -11,6 +11,7 @@
         android:text="Wifi status"
         android:textSize="30sp"
         android:gravity="center"
+        android:background="@color/rosyBrown"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"/>
 
