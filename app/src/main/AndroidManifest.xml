@@ -3,6 +3,7 @@
     package="com.nastia.administrator.lessonitacademy">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
@@ -30,6 +31,8 @@
         <activity android:name="lesson4.Lesson4Activity">
         </activity>
         <activity android:name="lesson5.Lesson5Activity">
+        </activity>
+        <activity android:name="lesson6.Lesson6Activity">
         </activity>
 
     </application>
