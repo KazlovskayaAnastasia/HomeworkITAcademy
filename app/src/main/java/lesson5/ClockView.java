@@ -45,7 +45,6 @@ public class ClockView extends View {
     public ClockView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initialize();
-
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -63,7 +62,6 @@ public class ClockView extends View {
                 4, r.getDisplayMetrics());
         myPan.setStrokeWidth(strokeWidthInPx);
 
-
         seconds = calendar.getTime().getSeconds();
         minutes = calendar.getTime().getMinutes();
         hours = calendar.getTime().getHours();
@@ -72,59 +70,58 @@ public class ClockView extends View {
 
     }
 
-        @Override
+    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
         myPan.setTextSize(24);
         myPan.setColor(ContextCompat.getColor(getContext(), R.color.lightGreen));
         myPan.setStyle(Paint.Style.FILL);
-        canvas.drawText(calendar.getTime().toString(),-210 + getWidth()/2,5*getHeight()/6,myPan);
+        canvas.drawText(calendar.getTime().toString(), -210 + getWidth() / 2, 5 * getHeight() / 6, myPan);
 
 
         myPan.setColor(ContextCompat.getColor(getContext(), R.color.white));
-        for(int i=0;i<60;i++) {
-            canvas.drawCircle(getWidth()/2,getHeight()/2 - getWidth()/3,dotRadius , myPan);
-            canvas.rotate(6,getWidth()/2,getHeight()/2);
+        for (int i = 0; i < 60; i++) {
+            canvas.drawCircle(getWidth() / 2, getHeight() / 2 - getWidth() / 3, dotRadius, myPan);
+            canvas.rotate(6, getWidth() / 2, getHeight() / 2);
         }
 
         //
         myPan.setColor(ContextCompat.getColor(getContext(), R.color.rosyBrown));
-        canvas.drawCircle(getWidth() / 2, getHeight() / 2 - getWidth() / 3, 2*dotRadius, myPan);
+        canvas.drawCircle(getWidth() / 2, getHeight() / 2 - getWidth() / 3, 2 * dotRadius, myPan);
 
         myPan.setColor(ContextCompat.getColor(getContext(), R.color.yellow));
 
         int count = canvas.save();
-        for(int i=0;i<=seconds;i++){
-            if(i!=0) {
-                //myPan.setStrokeWidth(10);
+        for (int i = 0; i <= seconds; i++) {
+            if (i != 0) {
                 canvas.drawCircle(getWidth() / 2, getHeight() / 2 - getWidth() / 3, dotRadius, myPan);
             }
-            canvas.rotate(6,getWidth()/2,getHeight()/2);
+            canvas.rotate(6, getWidth() / 2, getHeight() / 2);
         }
 
         canvas.restoreToCount(count);
-        canvas.rotate(180,getWidth()/2,getHeight()/2);
-        for(int i=0;i<=60;i++){
-            if(i==minutes) {
+        canvas.rotate(180, getWidth() / 2, getHeight() / 2);
+        for (int i = 0; i <= 60; i++) {
+            if (i == minutes) {
                 myPan.setStrokeWidth(10);
-                canvas.drawLine(getWidth() / 2, getHeight() / 2, getWidth() / 2,(getHeight() / 2 - radius + 290), myPan);
+                canvas.drawLine(getWidth() / 2, getHeight() / 2, getWidth() / 2, (getHeight() / 2 - radius + 290), myPan);
             }
 
-            if(i==seconds) {
+            if (i == seconds) {
                 myPan.setStrokeWidth(5);
-                canvas.drawLine(getWidth() / 2, (getHeight() / 2 - radius + 310), getWidth() / 2,getHeight() / 2, myPan);
+                canvas.drawLine(getWidth() / 2, (getHeight() / 2 - radius + 310), getWidth() / 2, getHeight() / 2, myPan);
             }
-            canvas.rotate(6,getWidth()/2,getHeight()/2);
+            canvas.rotate(6, getWidth() / 2, getHeight() / 2);
         }
-        for(int i=0;i<=hours;i++){
-            if(i==hours) {
+        for (int i = 0; i <= hours; i++) {
+            if (i == hours) {
                 myPan.setStrokeWidth(14);
-                canvas.drawLine(getWidth() / 2, (getHeight() / 2 - radius + 250), getWidth() / 2,getHeight() / 2, myPan);
+                canvas.drawLine(getWidth() / 2, (getHeight() / 2 - radius + 250), getWidth() / 2, getHeight() / 2, myPan);
             }
-            canvas.rotate(30,getWidth()/2,getHeight()/2);
-
+            canvas.rotate(30, getWidth() / 2, getHeight() / 2);
         }
+
         invalidate();
     }
 }
