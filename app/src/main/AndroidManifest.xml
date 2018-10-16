@@ -34,6 +34,8 @@
         </activity>
         <activity android:name="lesson6.Lesson6Activity">
         </activity>
+        <activity android:name="lesson7.Lesson7Activity">
+        </activity>
         <service android:name="lesson6.MyService" />
 
     </application>

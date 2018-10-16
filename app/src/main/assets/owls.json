@@ -1,0 +1,21 @@
+{
+  "name": "Json owls file",
+  "creation_date": "16.10.2018",
+  "owls": [
+    {
+      "name": "Alex",
+      "age": "13",
+      "picture": ""
+    },
+    {
+      "name": "Alex",
+      "age": "13",
+      "picture": ""
+    },
+    {
+      "name": "Alex",
+      "age": "13",
+      "picture": ""
+    }
+  ]
+}
