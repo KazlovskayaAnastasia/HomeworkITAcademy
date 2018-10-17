@@ -9,18 +9,21 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.nastia.administrator.lessonitacademy.R
 
-class OwlAdapter(var context: Context) : RecyclerView.Adapter<OwlAdapter.OwlHolder>() {
+class OwlAdapter(var context: Context, private var listener: OnItemSelectedListener?) : RecyclerView.Adapter<OwlAdapter.OwlHolder>() {
 
-    var listItem: MutableList<Owl> = mutableListOf()
+    private var listItem: MutableList<Owl> = mutableListOf()
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewId: Int): OwlHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.owl_item, viewGroup, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.owl_item, viewGroup, false)
         return OwlHolder(view, context)
     }
 
     override fun getItemCount() = listItem.size
 
     override fun onBindViewHolder(holder: OwlHolder, pos: Int) {
+        holder.itemView.setOnClickListener{
+            listener?.itemSelected(pos)
+        }
         holder.setItem(listItem[pos])
     }
 
@@ -41,5 +44,9 @@ class OwlAdapter(var context: Context) : RecyclerView.Adapter<OwlAdapter.OwlHold
         listItem.clear()
         listItem.addAll(list)
         notifyDataSetChanged()
+    }
+
+    interface OnItemSelectedListener{
+        fun itemSelected(position: Int)
     }
 }

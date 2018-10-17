@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Details"
+        android:textSize="40dp"/>
+
+    <ImageView
+        android:id="@+id/image_details"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        tools:background="@drawable/sova_anmation_1"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/name_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:textSize="40dp"/>
+
+        <EditText
+            android:id="@+id/et_name_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Alex"
+            android:textSize="40dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/age_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/tv_age_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age:  "
+            android:textSize="40dp"/>
+
+        <EditText
+            android:id="@+id/et_age_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10"
+            android:textSize="40dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Save change"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:background="@drawable/btn_save"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/btn_delete"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:background="@drawable/btn_delete"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
