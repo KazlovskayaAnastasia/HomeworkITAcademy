@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.nastia.administrator.lessonitacademy.R
 
 class OwlAdapter(var context: Context, private var listener: OnItemSelectedListener?) : RecyclerView.Adapter<OwlAdapter.OwlHolder>() {
@@ -34,9 +35,15 @@ class OwlAdapter(var context: Context, private var listener: OnItemSelectedListe
         private val textView_age: TextView = itemView.findViewById(R.id.owls_age)
 
         fun setItem(owl: Owl){
-            imageView.setImageDrawable(context.resources.getDrawable(R.drawable.sova_anmation_1))
             textView_name.text = owl.name
             textView_age.text = owl.age.toString()
+
+            if(!owl.pic.isEmpty()){
+                Glide.with(this.context)
+                        .load(owl.pic).into(imageView)
+            } else{
+                imageView.setImageDrawable(context.resources.getDrawable(R.drawable.sova_anmation_1))
+            }
         }
     }
 
