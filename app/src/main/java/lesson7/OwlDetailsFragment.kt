@@ -65,7 +65,6 @@ class OwlDetailsFragment : Fragment() {
         et_name.setText(bundle.getString(KEY_NAME))
         et_age.setText(bundle.getInt(KEY_AGE).toString())
 
-
         return view
     }
 

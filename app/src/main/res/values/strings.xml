@@ -12,6 +12,7 @@
     <string name="btn_homework_6">Homework 6</string>
     <string name="btn_homework_7">Homework 7</string>
     <string name="get_image">Get image</string>
+    <string name="input_name">Input owl\'s name</string>
     <string name="url_image">http://i.imgur.com/DvpvklR.png</string>
 
 </resources>

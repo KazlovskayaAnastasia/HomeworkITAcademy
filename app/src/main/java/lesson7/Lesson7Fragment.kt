@@ -7,20 +7,22 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageButton
 import com.nastia.administrator.lessonitacademy.R
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
-
+import android.text.Editable
+import android.text.TextWatcher
 
 class Lesson7Fragment : Fragment() {
 
     lateinit var recyclerView: RecyclerView
     private lateinit var manager: LinearLayoutManager
-//    private lateinit var screenDto: List<Owl>
     private lateinit var owlAdapter: OwlAdapter
     private lateinit var addBtn: ImageButton
+    private lateinit var searchOwl: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +31,22 @@ class Lesson7Fragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = layoutInflater.inflate(R.layout.fragment_lesson7, container, false)
+        searchOwl = view.findViewById(R.id.et_search_owl)
+        searchOwl.addTextChangedListener(object : TextWatcher {
 
-        addBtn = view.findViewById<ImageButton>(R.id.btn_add).apply{
+            override fun beforeTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+            }
+
+            override fun onTextChanged(charSequence: CharSequence, i: Int, i1: Int, i2: Int) {
+            }
+
+            override fun afterTextChanged(editable: Editable) {
+                filter(editable.toString())
+            }
+        })
+        addBtn = view.findViewById<ImageButton>(R.id.btn_add).apply {
             setOnClickListener {
-                fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.fragment, OwlDetailsFragment.newInstance(Owl("","",0), -1))?.commit()
+                fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.fragment, OwlDetailsFragment.newInstance(Owl("", "", 0), -1))?.commit()
             }
         }
         owlAdapter = OwlAdapter(this.context!!, object : OwlAdapter.OnItemSelectedListener {
@@ -48,8 +62,18 @@ class Lesson7Fragment : Fragment() {
             layoutManager = manager
             adapter = owlAdapter
         }
-
         return view
+    }
+
+    private fun filter(text: String) {
+        val newList: MutableList<Owl> = mutableListOf()
+
+        for (s in listItems) {
+            if (s.name.toLowerCase().contains(text.toLowerCase())) {
+                newList.add(s)
+            }
+        }
+        owlAdapter.filterList(newList)
     }
 
     companion object {
@@ -70,15 +94,12 @@ class Lesson7Fragment : Fragment() {
                 val url_pic = jo_inside.getString("picture")
 
                 list.add(Owl(url_pic, owl_name, owl_age))
-
             }
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-
         return list
     }
-
 
     private fun loadJSONFromAsset(): String {
         var json = ""

@@ -22,7 +22,7 @@ class OwlAdapter(var context: Context, private var listener: OnItemSelectedListe
     override fun getItemCount() = listItem.size
 
     override fun onBindViewHolder(holder: OwlHolder, pos: Int) {
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             listener?.itemSelected(pos)
         }
         holder.setItem(listItem[pos])
@@ -34,26 +34,31 @@ class OwlAdapter(var context: Context, private var listener: OnItemSelectedListe
         private val textView_name: TextView = itemView.findViewById(R.id.owls_name)
         private val textView_age: TextView = itemView.findViewById(R.id.owls_age)
 
-        fun setItem(owl: Owl){
+        fun setItem(owl: Owl) {
             textView_name.text = owl.name
             textView_age.text = owl.age.toString()
 
-            if(!owl.pic.isEmpty()){
+            if (!owl.pic.isEmpty()) {
                 Glide.with(this.context)
                         .load(owl.pic).into(imageView)
-            } else{
+            } else {
                 imageView.setImageDrawable(context.resources.getDrawable(R.drawable.sova_anmation_1))
             }
         }
     }
 
-     fun setElements(list: List<Owl>) {
+    fun setElements(list: List<Owl>) {
         listItem.clear()
         listItem.addAll(list)
         notifyDataSetChanged()
     }
 
-    interface OnItemSelectedListener{
+    fun filterList(newList: MutableList<Owl>) {
+        this.listItem = newList
+        notifyDataSetChanged()
+    }
+
+    interface OnItemSelectedListener {
         fun itemSelected(position: Int)
     }
 }

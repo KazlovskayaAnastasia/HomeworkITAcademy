@@ -4,11 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/et_search_owl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_name"
+        android:textColor="@color/lightGreen"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/owl_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="60dp">
 
     </android.support.v7.widget.RecyclerView>
 
