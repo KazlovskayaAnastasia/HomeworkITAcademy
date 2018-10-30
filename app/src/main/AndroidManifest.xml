@@ -22,20 +22,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".lesson1.Lesson1Activity">
-        </activity>
-        <activity android:name="lesson2.Lesson2Activity">
-        </activity>
-        <activity android:name="lesson3.Lesson3Activity">
-        </activity>
-        <activity android:name="lesson4.Lesson4Activity">
-        </activity>
-        <activity android:name="lesson5.Lesson5Activity">
-        </activity>
-        <activity android:name="lesson6.Lesson6Activity">
-        </activity>
-        <activity android:name="lesson7.Lesson7Activity">
-        </activity>
+        <activity android:name=".lesson1.Lesson1Activity"/>
+        <activity android:name="lesson2.Lesson2Activity"/>
+        <activity android:name="lesson3.Lesson3Activity"/>
+        <activity android:name="lesson4.Lesson4Activity"/>
+        <activity android:name="lesson5.Lesson5Activity"/>
+        <activity android:name="lesson6.Lesson6Activity"/>
+        <activity android:name="lesson7.Lesson7Activity"/>
+        <activity android:name="lesson9.Lesson9Activity"/>
         <service android:name="lesson6.MyService" />
 
     </application>

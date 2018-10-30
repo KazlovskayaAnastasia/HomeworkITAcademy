@@ -14,6 +14,7 @@ import lesson4.Lesson4Activity;
 import lesson5.Lesson5Activity;
 import lesson6.Lesson6Activity;
 import lesson7.Lesson7Activity;
+import lesson9.Lesson9Activity;
 
 public class MainScreenActivity extends Activity {
 
@@ -24,6 +25,7 @@ public class MainScreenActivity extends Activity {
     Button btnHw5;
     Button btnHw6;
     Button btnHw7;
+    Button btnHw9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainScreenActivity extends Activity {
         btnHw5 = findViewById(R.id.btn_hw5);
         btnHw6 = findViewById(R.id.btn_hw6);
         btnHw7 = findViewById(R.id.btn_hw7);
+        btnHw9 = findViewById(R.id.btn_hw9);
 
         btnHw1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +99,15 @@ public class MainScreenActivity extends Activity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainScreenActivity.this, Lesson7Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnHw9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainScreenActivity.this, Lesson9Activity.class);
                 startActivity(intent);
             }
         });
