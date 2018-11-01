@@ -6,7 +6,6 @@ import com.bumptech.glide.Glide
 import android.databinding.BindingAdapter
 import android.widget.ImageView
 
-
 class Lesson10ViewModel(val key: String) : ViewModel() {
     private lateinit var person: Lesson10UserProfileDto
     val name = ObservableField<String>()
@@ -36,18 +35,19 @@ class Lesson10ViewModel(val key: String) : ViewModel() {
         }
     }
 
-    var imageUrl = image.get()//"https://files.adme.ru/files/news/part_78/786110/9719810-0_ecec6_5ae1203e_XXXL-650-32e9147584-1484579097.jpg"
+    //var imageUrl = image.get()//"https://files.adme.ru/files/news/part_78/786110/9719810-0_ecec6_5ae1203e_XXXL-650-32e9147584-1484579097.jpg"
 
     companion object {
         @BindingAdapter("bind:src")
         @JvmStatic
-        fun setSrc(view: ImageView, imageUrl: String?) {
+        fun loadImage(view: ImageView, imageUrl: String?) {
             if (imageUrl == null) {
-                view.setImageURI(null)
+                //view.setImageURI(null)
             } else {
-                Glide.with(view.context)
-                        .load(imageUrl)
-                        .into(view)
+                Glide.with(view).load(imageUrl).into(view)
+//                Glide.with(view.context)
+//                        .load(imageUrl)
+//                        .into(view)
 //            view.setImageURI(Uri.parse(imageUri))
             }
         }

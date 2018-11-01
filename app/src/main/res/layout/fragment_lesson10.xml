@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data>
         <variable
-            name="Lesson10ViewModel"
+            name="vmf"
             type="lesson10.Lesson10ViewModel" />
     </data>
 
@@ -15,12 +15,11 @@
         android:gravity="center_horizontal">
 
         <ImageView
-            android:id="@+id/user_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/lightGreen"
-            android:layout_marginTop="20dp"
-            app:src="@{Lesson10ViewModel.imageUrl}"/>
+        android:id="@+id/user_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        bind:src="@{vmf.image}"/>
 
         <TextView
             android:id="@+id/user_name"
@@ -29,7 +28,7 @@
             android:hint="Name"
             android:textSize="30dp"
             android:layout_marginTop="40dp"
-            android:text="@{Lesson10ViewModel.name}"/>
+            android:text="@{vmf.name}"/>
 
         <TextView
             android:id="@+id/user_surname"
@@ -38,7 +37,7 @@
             android:hint="Surname"
             android:textSize="30dp"
             android:layout_marginTop="20dp"
-            android:text="@{Lesson10ViewModel.surname}"/>
+            android:text="@{vmf.surname}"/>
 
         <TextView
             android:id="@+id/age"
@@ -47,7 +46,7 @@
             android:hint="Age"
             android:textSize="30dp"
             android:layout_marginTop="20dp"
-            android:text="@{Lesson10ViewModel.age}"/>
+            android:text="@{vmf.age}"/>
 
         <TextView
             android:id="@+id/gender"
@@ -56,7 +55,7 @@
             android:hint="Gender"
             android:textSize="30dp"
             android:layout_marginTop="20dp"
-            android:text="@{Lesson10ViewModel.gender}"/>
+            android:text="@{vmf.gender}"/>
 
     </LinearLayout>
 

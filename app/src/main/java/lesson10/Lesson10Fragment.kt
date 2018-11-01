@@ -26,7 +26,8 @@ class Lesson10Fragment : Fragment() {
         val viewModel: ViewModel = Lesson10ViewModel(bundle.getString(BUNDLE_KEY)?:"")
 
         val binding: ViewDataBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_lesson10, container, false)
-        binding.setVariable(BR.lesson10ViewModel, viewModel)
+
+        binding.setVariable(BR.vmf, viewModel)
         return binding.root
     }
 
