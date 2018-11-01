@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.nastia.administrator.lessonitacademy.R;
 
+import lesson10.Lesson10Activity;
 import lesson2.Lesson2Activity;
 import lesson3.Lesson3Activity;
 import lesson4.Lesson4Activity;
@@ -26,6 +27,7 @@ public class MainScreenActivity extends Activity {
     Button btnHw6;
     Button btnHw7;
     Button btnHw9;
+    Button btnHw10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainScreenActivity extends Activity {
         btnHw6 = findViewById(R.id.btn_hw6);
         btnHw7 = findViewById(R.id.btn_hw7);
         btnHw9 = findViewById(R.id.btn_hw9);
+        btnHw10 = findViewById(R.id.btn_hw10);
 
         btnHw1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +111,15 @@ public class MainScreenActivity extends Activity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainScreenActivity.this, Lesson9Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnHw10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainScreenActivity.this, Lesson10Activity.class);
                 startActivity(intent);
             }
         });

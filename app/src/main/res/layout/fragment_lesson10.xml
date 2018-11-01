@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Lesson10ViewModel"
+            type="lesson10.Lesson10ViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/lightGreen"
+            android:layout_marginTop="20dp"
+            app:src="@{Lesson10ViewModel.imageUrl}"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="30dp"
+            android:layout_marginTop="40dp"
+            android:text="@{Lesson10ViewModel.name}"/>
+
+        <TextView
+            android:id="@+id/user_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Surname"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@{Lesson10ViewModel.surname}"/>
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@{Lesson10ViewModel.age}"/>
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            android:text="@{Lesson10ViewModel.gender}"/>
+
+    </LinearLayout>
+
+
+
+</layout>

@@ -30,6 +30,7 @@
         <activity android:name="lesson6.Lesson6Activity"/>
         <activity android:name="lesson7.Lesson7Activity"/>
         <activity android:name="lesson9.Lesson9Activity"/>
+        <activity android:name="lesson10.Lesson10Activity"/>
         <service android:name="lesson6.MyService" />
 
     </application>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btn_mary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mary"
+        android:textSize="20dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/rosyBrown"/>
+
+    <Button
+        android:id="@+id/btn_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max"
+        android:textSize="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_toRightOf="@id/btn_mary"
+        android:background="@color/dark_blue"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_les10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+</RelativeLayout>
