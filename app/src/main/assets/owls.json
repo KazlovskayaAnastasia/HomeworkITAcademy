@@ -3,42 +3,42 @@
     {
       "name": "Alex",
       "age": "13",
-      "picture": "https://avatars.mds.yandex.net/get-pdb/776003/0557429a-131d-497b-af40-d4417d60323c/s1200"
+      "pic": "https://avatars.mds.yandex.net/get-pdb/776003/0557429a-131d-497b-af40-d4417d60323c/s1200"
     },
     {
       "name": "Max",
       "age": "5",
-      "picture": "http://rylik.ru/uploads/posts/2015-07/1436173430_owl-collection-1-11.jpg"
+      "pic": "http://rylik.ru/uploads/posts/2015-07/1436173430_owl-collection-1-11.jpg"
     },
     {
       "name": "Alice",
       "age": "18",
-      "picture": "https://files.adme.ru/files/news/part_78/786110/9719810-0_ecec6_5ae1203e_XXXL-650-32e9147584-1484579097.jpg"
+      "pic": "https://files.adme.ru/files/news/part_78/786110/9719810-0_ecec6_5ae1203e_XXXL-650-32e9147584-1484579097.jpg"
     },
     {
       "name": "Michael",
       "age": "3",
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccLyvMgJSviozNw992KT8vfhiBY7TS1ulSyWTx-xYpvqYT6Bw-w"
+      "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTccLyvMgJSviozNw992KT8vfhiBY7TS1ulSyWTx-xYpvqYT6Bw-w"
     },
     {
       "name": "Tim",
       "age": "10",
-      "picture": "http://shuwany.ru/wp-content/uploads/2014/02/02.jpeg"
+      "pic": "http://shuwany.ru/wp-content/uploads/2014/02/02.jpeg"
     },
     {
       "name": "Dori",
       "age": "16",
-      "picture": "https://art-dot.ru/wp-content/uploads/2013/05/ySiGYrKEow0.jpg"
+      "pic": "https://art-dot.ru/wp-content/uploads/2013/05/ySiGYrKEow0.jpg"
     },
     {
       "name": "Mary",
       "age": "10",
-      "picture": "https://avatanplus.com/files/resources/mid/582c759b37a6d1586dab665c.png"
+      "pic": "https://avatanplus.com/files/resources/mid/582c759b37a6d1586dab665c.png"
     },
     {
       "name": "Henry",
       "age": "11",
-      "picture": "http://drawi.ru/pic/3519dedd9a7bbbe1.jpeg"
+      "pic": "http://drawi.ru/pic/3519dedd9a7bbbe1.jpeg"
     }
   ]
 }
