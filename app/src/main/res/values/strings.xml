@@ -18,5 +18,17 @@
     <string name="timer_here">Timer here</string>
     <string name="input_name">Input owl\'s name</string>
     <string name="url_image">http://i.imgur.com/DvpvklR.png</string>
+    <string name="finish">Finish</string>
+    <string name="delete">Delete</string>
+    <string name="save_change">Save change</string>
+    <string name="name">Ivan</string>
+    <string name="surname">Ivanov</string>
+    <string name="got_it">Got it</string>
+    <string name="start">Start</string>
+    <string name="not_now">Not now</string>
+    <string name="avatar_text">This is your avatar. You can click it to select and to change the picture</string>
+    <string name="prompt_btn_save">Click it if you need to save some changes</string>
+    <string name="prompt_btn_delete">Click it if you need to delete your account</string>
+    <string name="tv_welcome_text">Glad to see you on study screen. Do you want to get trained?</string>
 
 </resources>
